@@ -1,0 +1,74 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "model": "opencode/big-pickle",
+  "small_model": "opencode/big-pickle",
+  "default_agent": "orchestrator",
+  "instructions": ["AGENTS.md"],
+  "permission": {
+    "read": "allow",
+    "edit": "allow",
+    "glob": "allow",
+    "grep": "allow",
+    "list": "allow",
+    "bash": "allow",
+    "task": "allow",
+    "external_directory": "allow",
+    "todowrite": "allow",
+    "webfetch": "allow",
+    "websearch": "allow",
+    "lsp": "allow",
+    "skill": "allow",
+    "question": "allow"
+  },
+  "agent": {
+    "orchestrator": {
+      "mode": "primary",
+      "model": "opencode/big-pickle",
+      "temperature": 0.1,
+      "steps": 20,
+      "color": "primary",
+      "description": "Orchestrateur : planifie, délègue au dev et au testeur, synthétise les résultats. Agent par défaut.",
+      "permission": {
+        "task": {
+          "*": "deny",
+          "dev": "allow",
+          "tester": "allow"
+        }
+      }
+    },
+    "dev": {
+      "mode": "all",
+      "model": "opencode/big-pickle",
+      "temperature": 0.2,
+      "steps": 40,
+      "color": "success",
+      "description": "Développeur principal : implémente, refactore et corrige le code. Agent principal du travail de code.",
+      "permission": {
+        "task": {
+          "*": "deny"
+        }
+      }
+    },
+    "tester": {
+      "mode": "subagent",
+      "model": "opencode/big-pickle",
+      "temperature": 0.1,
+      "steps": 25,
+      "color": "warning",
+      "description": "Testeur : exécute les tests, valide le travail du dev et remonte les corrections nécessaires.",
+      "permission": {
+        "task": {
+          "*": "deny"
+        }
+      }
+    }
+  },
+  "tool_output": {
+    "max_lines": 150,
+    "max_bytes": 6000
+  },
+  "compaction": {
+    "auto": true,
+    "tail_turns": 10
+  }
+}
