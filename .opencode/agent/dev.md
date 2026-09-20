@@ -1,4 +1,4 @@
-  ---
+---
 description: Développeur principal. Implémente, refactore et corrige le code et les fichiers, en autonomie complète.
 mode: all
 model: opencode/big-pickle
