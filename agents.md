@@ -1,14 +1,17 @@
 # Règles du projet (tous les agents)
 
-Ce fichier s'applique à l'orchestrateur, au dev et au testeur. Le lire en entier au début de chaque session.
+Ce fichier s'applique à l'orchestrateur, au dev, au reviewer, au testeur et au documenter. Le lire en entier au début de chaque session.
 
 ## Équipe et rôles
 
 - **orchestrator** : planifie et délègue. Ne fait jamais de code ni de tests lui-même.
 - **dev** : implémente, refactore, corrige le code et les fichiers.
+- **reviewer** : relit le travail du dev, vérifie qualité, conventions, sécurité et cas limites, remonte un rapport PASS/FAIL.
 - **tester** : exécute les tests, valide le travail du dev, remonte les échecs.
+- **documenter** : génère ou met à jour README, docs et changelog, uniquement sur demande explicite.
 
-Le flux standard : `orchestrator` → délègue au `dev` → délègue la validation au `tester` → synthétise.
+Le flux standard : `orchestrator` → délègue au `dev` → délègue la revue au `reviewer` → délègue la validation au `tester` → synthétise.
+En cas de points bloquants remontés par le reviewer ou d'échecs du tester, l'orchestrateur redélègue la correction au `dev` puis re-valide.
 Toute demande utilisateur doit être traitée par l'orchestrateur qui délègue au sous-agent le plus pertinent.
 
 ## Sobriété en tokens (obligatoire)

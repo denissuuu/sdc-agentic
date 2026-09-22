@@ -27,12 +27,14 @@
       "temperature": 0.1,
       "steps": 20,
       "color": "primary",
-      "description": "Orchestrateur : planifie, délègue au dev et au testeur, synthétise les résultats. Agent par défaut.",
+      "description": "Orchestrateur : planifie, délègue au dev, au reviewer, au testeur et au documenter, synthétise les résultats. Agent par défaut.",
       "permission": {
         "task": {
           "*": "deny",
           "dev": "allow",
-          "tester": "allow"
+          "reviewer": "allow",
+          "tester": "allow",
+          "documenter": "allow"
         }
       }
     },
@@ -56,6 +58,32 @@
       "steps": 25,
       "color": "warning",
       "description": "Testeur : exécute les tests, valide le travail du dev et remonte les corrections nécessaires.",
+      "permission": {
+        "task": {
+          "*": "deny"
+        }
+      }
+    },
+    "reviewer": {
+      "mode": "subagent",
+      "model": "opencode/big-pickle",
+      "temperature": 0.1,
+      "steps": 25,
+      "color": "info",
+      "description": "Reviewer : relit le travail du dev, vérifie qualité, conventions, sécurité et cas limites, remonte un rapport PASS/FAIL.",
+      "permission": {
+        "task": {
+          "*": "deny"
+        }
+      }
+    },
+    "documenter": {
+      "mode": "subagent",
+      "model": "opencode/big-pickle",
+      "temperature": 0.2,
+      "steps": 25,
+      "color": "muted",
+      "description": "Documenter : génère ou met à jour README, documentation et changelog, uniquement sur demande explicite.",
       "permission": {
         "task": {
           "*": "deny"
