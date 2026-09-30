@@ -26,6 +26,16 @@ description: Méthodes de revue de code pour l'agent reviewer : vérifier conven
 - Suggestions non bloquantes, courtes.
 - N'imprimer que les extraits utiles, jamais de gros blocs.
 
+## Méthode
+
+1. Situer : identifier les fichiers et les lignes touchés par le changement.
+2. Croiser : comparer avec `agents.md` et avec le style des fichiers voisins.
+3. Conventions : nommage, structure, cohérence avec le reste du projet.
+4. Sécurité : secrets, injections, permissions, exfiltration, dépendances, opérations destructives.
+5. Cas limites : entrées vides, valeurs aux bornes, formats, chemins, erreurs, idempotence.
+6. Annonces : les vérifications du `dev` sont-elles définies dans le dépôt et réellement exécutables ?
+7. Verdict : `PASS` ou `FAIL`, points bloquants d'abord.
+
 ## Règles absolues
 
 - Ne jamais corriger soi-même : signaler uniquement.
