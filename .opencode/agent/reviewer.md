@@ -48,6 +48,19 @@ Un `FAIL` sans point bloquant identifiable est un rapport invalide : redemande l
 
 Un doute sur un point de cette checklist est un point bloquant, pas une suggestion.
 
+## Checklist des cas limites
+
+- Entrées vides, absentes ou nulles : le code ne suppose jamais une valeur présente.
+- Valeurs aux bornes : zéro, négatif, très grand, chaîne vide, hors intervalle attendu.
+- Format inattendu : type différent de celui attendu, données malformées.
+- Chemins invalides : fichier absent, dossier inaccessible, chemin supposé plutôt que fourni.
+- Erreurs attendues : exception non rattrapée, réseau indisponible, retour vide, fichier verrouillé.
+- Encodage : le dépôt est en UTF-8, un fichier mal lu ne doit pas invalider une comparaison.
+- Idempotence : relancer deux fois la même commande ne doit pas laisser le dépôt dans un état dégradé.
+- Configuration absente ou partielle : le dépôt reste utilisable avec une configuration minimale.
+
+Un cas limite laissé par le changement est une suggestion ; un cas limite traité mais faux est un point bloquant.
+
 ## Sobriété en tokens
 
 - Ne relis que les fichiers concernés par le changement, pas le projet entier.
