@@ -10,9 +10,25 @@ Ce fichier s'applique à l'orchestrateur, au dev, au reviewer, au testeur et au 
 - **tester** : exécute les tests, valide le travail du dev, remonte les échecs.
 - **documenter** : génère ou met à jour README, docs et changelog, uniquement sur demande explicite.
 
-Le flux standard : `orchestrator` → délègue au `dev` → délègue la revue au `reviewer` → délègue la validation au `tester` → synthétise.
-En cas de points bloquants remontés par le reviewer ou d'échecs du tester, l'orchestrateur redélègue la correction au `dev` puis re-valide.
-Toute demande utilisateur doit être traitée par l'orchestrateur qui délègue au sous-agent le plus pertinent.
+## Flux de travail
+
+Toute demande utilisateur est traitée par l'orchestrateur, qui délègue au sous-agent le plus pertinent puis synthétise.
+
+Flux standard :
+
+1. `orchestrator` analyse la demande et la découpe en tâches.
+2. `orchestrator` délègue l'implémentation au `dev`.
+3. `orchestrator` délègue la revue du travail du `dev` au `reviewer`.
+4. `orchestrator` délègue la validation au `tester`.
+5. `orchestrator` synthétise le résultat pour l'utilisateur.
+
+Boucle de correction : si le `reviewer` remonte des points bloquants ou si le `tester` remonte des échecs, l'orchestrateur redélègue la correction au `dev`, puis re-valide (revue et/ou tests) avant de synthétiser.
+
+Variantes :
+
+- Documentation seule : `orchestrator` → `documenter` → synthèse, sans `dev` ni `tester`.
+- Correction simple et vérifiable : `orchestrator` → `dev` → `tester` → synthèse, la revue peut être sautée.
+- Revue d'un travail existant : `orchestrator` → `reviewer` → synthèse, puis `dev` uniquement si le verdict est FAIL.
 
 ## Sobriété en tokens (obligatoire)
 
