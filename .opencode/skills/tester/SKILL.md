@@ -17,6 +17,15 @@ description: Méthodes de test et de validation pour l'agent tester : identifier
 - Tester les cas limites évidents (entrées vides, valeurs limites, erreurs).
 - Réexécuter une commande lourde uniquement si nécessaire.
 
+## Méthode
+
+1. Identifier : framework et scripts définis dans le dépôt (`package.json`, `README`, CI).
+2. Choisir : les vérifications qui touchent le changement fait par le `dev`.
+3. Exécuter : d'abord la vérification la plus ciblée, puis élargir si elle passe.
+4. Explorer : entrées vides, valeurs aux bornes, formats, chemins invalides, erreurs, idempotence.
+5. Contrôler : aucune commande ne doit laisser de fichier parasite ni de fichier modifié.
+6. Rendre le verdict : `PASS` ou `FAIL` avec les commandes exécutées, ou le rapport d'escalade.
+
 ## Rapport
 
 - Statut : `PASS` ou `FAIL`.
