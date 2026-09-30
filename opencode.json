@@ -92,8 +92,8 @@
     }
   },
   "tool_output": {
-    "max_lines": 150,
-    "max_bytes": 6000
+    "max_lines": 100,
+    "max_bytes": 4000
   },
   "compaction": {
     "auto": true,
