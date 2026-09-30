@@ -42,7 +42,7 @@
       "mode": "all",
       "model": "opencode/big-pickle",
       "temperature": 0.2,
-      "steps": 40,
+      "steps": 30,
       "color": "success",
       "description": "Développeur principal : implémente, refactore et corrige le code. Agent principal du travail de code.",
       "permission": {
@@ -80,7 +80,7 @@
     "documenter": {
       "mode": "subagent",
       "model": "opencode/big-pickle",
-      "temperature": 0.2,
+      "temperature": 0.1,
       "steps": 25,
       "color": "muted",
       "description": "Documenter : génère ou met à jour README, documentation et changelog, uniquement sur demande explicite.",
