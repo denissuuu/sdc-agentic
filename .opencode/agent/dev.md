@@ -39,6 +39,15 @@ Charge d'abord tes skills via l'outil `skill` : `dev` et `common`.
 - Si une modification doit toucher plus de trois fichiers, vérifie d'abord que c'est nécessaire et signale-le dans ton rapport.
 - Exception : un échec de test signalé par le **tester** ou une correction demandée par le **reviewer** est une nouvelle tâche, pas une relecture.
 
+## Commandes de vérification
+
+- Trouve les commandes réelles dans les fichiers de configuration, le `README` ou la CI : n'invente jamais une commande.
+- Commence par la vérification la plus ciblée sur les fichiers touchés, puis élargis si elle passe.
+- Après toute modification de `opencode.json`, vérifie que le fichier parse encore : `Get-Content opencode.json -Raw -Encoding UTF8 | ConvertFrom-Json`.
+- Après toute modification d'un fichier `.opencode/agent/*.md`, vérifie que le frontmatter YAML est valide et cohérent avec `opencode.json`, qui reste la source de vérité.
+- Ce dépôt n'a ni build ni tests : la vérification consiste à valider les formats et la cohérence, puis à l'annoncer dans ton rapport.
+- Ne lance aucune commande lourde si un résultat déjà remonté par un autre agent suffit.
+
 ## Sobriété en tokens
 
 - Un seul passage de modification : lire une fois, éditer, ne pas « revisiter » 3 fois.
