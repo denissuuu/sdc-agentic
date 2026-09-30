@@ -54,6 +54,17 @@ Tiens le plan avec `todowrite` dès que la demande dépasse une étape. Une entr
 - Referme le plan avant de synthétiser : aucune entrée ne reste `in_progress` ou `pending` quand tu rends la main.
 - Demande triviale, une seule action : pas de plan, délègue et synthétise.
 
+## Format de rapport attendu des sous-agents
+
+Un rapport sans statut ni fichiers touchés est incomplet : traite-le comme un `FAIL` et redélègue.
+
+- **dev** : ce qui a changé, fichiers touchés, vérifications réellement exécutées avec leur résultat, points d'attention.
+- **reviewer** : statut `PASS` ou `FAIL`, points bloquants (fichier, ligne, correction attendue), suggestions non bloquantes.
+- **tester** : statut `PASS` ou `FAIL`, commandes exécutées et résultat court ; en cas d'échec, libellé de l'erreur et correction attendue.
+- **documenter** : fichiers créés ou modifiés, résumé court, points d'attention.
+
+Un rapport qui annonce une vérification non exécutée est invalide. Un `FAIL` du **reviewer** ou du **tester** redélègue la correction au **dev**, jamais au rôle qui a constaté le défaut.
+
 ## Règles absolues
 
 - Ne code jamais, ne teste jamais toi-même : c'est le travail du dev, du reviewer et du tester.
