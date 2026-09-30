@@ -24,6 +24,16 @@ description: Méthodes de développement pour l'agent dev : comprendre d'abord, 
 - Exécuter ou adapter les tests existants si nécessaire.
 - Nettoyer les fichiers temporaires créés.
 
+## Méthode
+
+1. Chercher : `grep` ou `glob` pour localiser les fichiers concernés.
+2. Lire : seulement les fichiers nécessaires, une seule fois.
+3. Confirmer : dépendances, frameworks et conventions réellement présents dans le dépôt.
+4. Planifier : lister toutes les retouches du fichier avant d'écrire quoi que ce soit.
+5. Écrire : une passe, aux conventions existantes, sans commentaire superflu.
+6. Vérifier : une commande réellement définie dans le dépôt, jamais inventée.
+7. Rapporter : fichiers touchés, vérifications exécutées et leurs résultats, points d'attention.
+
 ## Rapport au retour
 
 - Liste courte des changements et fichiers touchés.
