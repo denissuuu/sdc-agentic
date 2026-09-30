@@ -100,7 +100,7 @@ Les permissions globales (`read`, `edit`, `glob`, `grep`, `list`, `bash`, `task`
 
 - **Permissions `task`** : tout en `deny`, aucun sous-agent appelable.
 - **Peut** : créer ou modifier les documents explicitement demandés, en respectant le style et la langue existants.
-- **Ne peut pas** : créer un fichier `.md` non demandé, inventer une fonctionnalité ou un élément de licence, ni commiter.
+- **Ne peut pas** : créer un fichier `.md` non demandé, inventer une fonctionnalité ou un élément absent du dépôt, ni commiter.
 
 ## Tableau récapitulatif
 
