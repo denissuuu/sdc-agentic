@@ -14,6 +14,15 @@ description: Méthode d'orchestration pour l'agent orchestrator : analyser, plan
 5. En cas d'échec remonté : redélégation au `dev` puis re-validation par le `tester`.
 6. Synthèse utilisateur : résultat, statut, reste à faire. Courte.
 
+## Méthode
+
+1. Analyser : lire la demande, `agents.md` et les fichiers nécessaires, pas davantage.
+2. Planifier : découper en tâches et tenir le plan avec `todowrite`.
+3. Choisir : le sous-agent pertinent, un seul rôle par `task`.
+4. Déléguer : contexte minimal, fichiers concernés, critères d'acceptation, rapport attendu.
+5. Arbitrer : `FAIL` du `reviewer` ou du `tester` → correction par le `dev`, puis re-validation.
+6. Synthétiser : résultat, statut, reste à faire, en quelques lignes.
+
 ## Pièges à éviter
 
 - Ne jamais coder ni tester soi-même.
