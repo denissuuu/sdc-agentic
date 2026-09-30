@@ -76,6 +76,23 @@ Branches :
 - Branches de travail : `type/description-courte-sujet` (exemple : `docs/clarifier-flux-orchestrateur`).
 - Une branche de travail est fusionnée vers `main` une fois le travail validé, puis supprimée.
 
+## Glossaire
+
+- **Agent** : personnage d'instructions défini dans `.opencode/agent/`, avec son rôle et ses permissions.
+- **Sous-agent** : agent invoqué par un autre agent via l'outil `task`, sans le contexte complet de la session.
+- **Skill** : méthode d'exécution stockée dans `.opencode/skills/<nom>/SKILL.md`, chargée à la demande via l'outil `skill`.
+- **Délégation** : transmission d'une tâche de l'orchestrateur vers un sous-agent, avec contexte minimal et critères d'acceptation.
+- **Frontières de délégation** : ce qui relève de l'orchestrateur (plan, arbitrage, synthèse) et ce qui n'en relève pas (code, tests, revue).
+- **Rapport** : message de retour d'un sous-agent : changements effectués, fichiers touchés, points d'attention.
+- **PASS / FAIL** : verdict du `reviewer` (conformité) ou du `tester` (validation), accompagné des points bloquants le cas échéant.
+- **Point bloquant** : défaut qui interdit de valider le travail ; tout le reste est une suggestion non bloquante.
+- **Critères d'acceptation** : conditions vérifiables qui permettent de déclarer une tâche terminée.
+- **Redélégation** : renvoi de la correction au `dev` après un FAIL, suivi d'une re-validation.
+- **`todowrite`** : outil utilisé par l'orchestrateur pour tenir le plan d'exécution.
+- **`tool_output`** : section de `opencode.json` qui plafonne la taille des sorties d'outils.
+- **`compaction`** : section de `opencode.json` qui définit la compaction automatique du contexte.
+- **`instructions`** : entrée de `opencode.json` qui désigne le fichier de règles chargé dans toutes les sessions.
+
 ## Commandes d'instruction
 
 Voir le fichier `agents.md` (racine). Toute incompréhension de la demande doit être remontée à l'orchestrateur.
