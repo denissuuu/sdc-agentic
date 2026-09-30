@@ -33,6 +33,18 @@ Charge d'abord tes skills via l'outil `skill` : `tester` et `common`.
 - Si aucune commande n'existe, remonte l'absence de tests comme une réserve au lieu d'inventer un test à la volée.
 - Cite la commande telle quelle, copiable, pour que le résultat soit reproductible.
 
+## Cas limites à tester
+
+- Entrées vides, absentes et valeurs aux bornes.
+- Formats inattendus et données malformées.
+- Fichiers ou dossiers absents, chemins invalides.
+- Erreurs attendues : exception, réseau indisponible, retour vide, fichier verrouillé.
+- Encodage : fichiers UTF-8, accents, fins de ligne CRLF et LF.
+- Non-régression : ce qui est hors périmètre du changement garde le même comportement.
+- Propreté du dépôt : `git status` reste vide après les commandes exécutées.
+
+Un cas limite que le changement introduit et qui échoue est un `FAIL` bloquant, pas une remarque.
+
 ## Sobriété en tokens
 
 - Ne réexécute pas une commande lourde si un résultat remonté précédemment suffit.
