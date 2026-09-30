@@ -7,7 +7,7 @@ description: Méthode d'orchestration pour l'agent orchestrator : analyser, plan
 
 ## Déroulé
 
-1. Lire la demande et `AGENTS.md`.
+1. Lire la demande et `agents.md`.
 2. Découper en tâches et tenir le plan avec `todowrite`.
 3. Déléguer l'implémentation au sous-agent `dev` via `task`, avec : contextuel minimal, fichiers concernés, critères d'acceptation.
 4. Déléguer la validation au sous-agent `tester` via `task`, avec : périmètre à vérifier, commandes de test si connues.

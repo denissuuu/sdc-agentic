@@ -8,7 +8,7 @@ description: Méthodes de revue de code pour l'agent reviewer : vérifier conven
 ## Préparation
 
 - Identifier les fichiers concernés par le changement du dev (rapport, diff) sans tout relire.
-- Croiser le changement avec les conventions du projet (AGENTS.md, style des fichiers adjacents).
+- Croiser le changement avec les conventions du projet (agents.md, style des fichiers adjacents).
 
 ## Checklist
 
