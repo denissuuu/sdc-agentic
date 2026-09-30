@@ -25,6 +25,15 @@ description: Règles communes de sobriété en tokens et de qualité de code par
 - Ne jamais commiter, sauvegarder ou dévoiler des secrets/clés.
 - Nettoyer son propre désordre : pas de fichiers temporaires inutiles.
 - Remonter tout doute sur la demande au lieu de deviner.
+- Un changement hors périmètre se signale, il ne s'ajoute pas d'office.
+
+## Secrets
+
+- Aucun secret dans un fichier, un commit, un log ou un rapport : ni clé, ni token, ni mot de passe, ni identifiant, ni variable sensible.
+- `.env` et ses variantes restent ignorés par `.gitignore` ; seul un `.env.example` sans valeur est admis.
+- Une valeur aperçue dans un fichier se signale par son chemin et sa ligne, elle ne se recopie jamais dans le rapport.
+- Ne pas exécuter une commande qui affiche des variables d'environnement ou des fichiers de credentials.
+- Au moindre doute sur le caractère sensible d'une valeur, traite-la comme un secret.
 
 ## Équipe
 
