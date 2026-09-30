@@ -1,0 +1,28 @@
+# Systèmes d'exploitation
+.DS_Store
+.AppleDouble
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Éditeurs
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Dépendances
+node_modules/
+
+# Environnement et secrets
+.env
+.env.*
+!.env.example
+
+# Logs et artefacts
+*.log
+npm-debug.log*
+coverage/
+.cache/
+tmp/
