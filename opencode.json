@@ -3,7 +3,7 @@
   "model": "opencode/big-pickle",
   "small_model": "opencode/big-pickle",
   "default_agent": "orchestrator",
-  "instructions": ["AGENTS.md"],
+  "instructions": ["agents.md"],
   "permission": {
     "read": "allow",
     "edit": "allow",

@@ -33,4 +33,4 @@ Toute demande utilisateur doit être traitée par l'orchestrateur qui délègue 
 
 ## Commande d'instruction
 
-Voir le fichier `AGENTS.md` (racine). Toute incompréhension de la demande doit être remontée à l'orchestrateur.
+Voir le fichier `agents.md` (racine). Toute incompréhension de la demande doit être remontée à l'orchestrateur.
