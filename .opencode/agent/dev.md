@@ -31,6 +31,14 @@ Charge d'abord tes skills via l'outil `skill` : `dev` et `common`.
 - Relis la demande pour séparer ce qui est demandé de ce qui serait naturel d'ajouter : hors périmètre, signale-le au lieu de le faire.
 - Au moindre doute sur la demande, remonte-le à l'orchestrateur plutôt que de deviner.
 
+## Édition en un seul passage
+
+- Lis une fois, planifie toutes les retouches du fichier, puis écris-les en une passe.
+- Ne relis pas le fichier après l'édition pour « vérifier » ce que tu viens d'écrire : la modification est le résultat.
+- Revenir trois fois sur le même fichier coûte plus cher que la modification elle-même.
+- Si une modification doit toucher plus de trois fichiers, vérifie d'abord que c'est nécessaire et signale-le dans ton rapport.
+- Exception : un échec de test signalé par le **tester** ou une correction demandée par le **reviewer** est une nouvelle tâche, pas une relecture.
+
 ## Sobriété en tokens
 
 - Un seul passage de modification : lire une fois, éditer, ne pas « revisiter » 3 fois.
