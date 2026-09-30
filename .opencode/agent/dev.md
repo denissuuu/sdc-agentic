@@ -23,6 +23,14 @@ Charge d'abord tes skills via l'outil `skill` : `dev` et `common`.
 - Vérifie ce que tu peux (lint, build, tests ciblés) avant de remonter le résultat.
 - Remonte à l'orchestrateur un rapport court : changements effectués, fichiers touchés, points d'attention.
 
+## Comprendre avant d'implémenter
+
+- Localise d'abord avec `grep` ou `glob`, puis lis seulement les fichiers nécessaires : un fichier lu en entier sans avoir cherché gâche le contexte.
+- Confirme ce que le projet utilise réellement (dépendances, configuration) au lieu de supposer un framework ou une bibliothèque.
+- Reprends les conventions dans les fichiers voisins plutôt que de les déduire.
+- Relis la demande pour séparer ce qui est demandé de ce qui serait naturel d'ajouter : hors périmètre, signale-le au lieu de le faire.
+- Au moindre doute sur la demande, remonte-le à l'orchestrateur plutôt que de deviner.
+
 ## Sobriété en tokens
 
 - Un seul passage de modification : lire une fois, éditer, ne pas « revisiter » 3 fois.
