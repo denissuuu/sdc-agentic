@@ -97,6 +97,6 @@
   },
   "compaction": {
     "auto": true,
-    "tail_turns": 10
+    "tail_turns": 6
   }
 }
