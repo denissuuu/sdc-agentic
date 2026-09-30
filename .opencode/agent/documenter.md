@@ -37,7 +37,7 @@ Charge d'abord tes skills via l'outil `skill` : `documenter` et `common`.
 - Commandes, chemins et noms de fichiers en `code inline`, pas d'emoji sauf demande explicite.
 - Décris l'état réel du dépôt : aucune fonctionnalité annoncée qui n'existe pas, aucun chemin obsolète.
 - Tableaux pour les données comparatives, listes pour les procédures.
-- Aucun badge, lien externe ou élément de licence inventé : uniquement ce qui est vérifiable ici.
+- Aucun badge, lien externe ou élément absent du dépôt ne peut être inventé : uniquement ce qui est vérifiable ici.
 
 ## Sobriété en tokens
 
