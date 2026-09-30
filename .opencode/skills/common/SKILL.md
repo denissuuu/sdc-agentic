@@ -13,6 +13,10 @@ description: Règles communes de sobriété en tokens et de qualité de code par
 - Ne pas imprimer de gros fichiers (logs, package-lock, node_modules) dans le contexte.
 - Ne pas dupliquer le travail d'un autre agent ; se fier aux rapports.
 - Ne pas relancer une commande lourde si un résultat déjà remonté suffit.
+- Ne pas relire un fichier déjà couvert par un rapport de sous-agent : le rapport est la version courte et vérifiée.
+- Regrouper les lectures et les vérifications proches en une seule commande plutôt que d'enchaîner les appels.
+- Poser une question fermée plutôt que trois options à commenter.
+- Ne pas coller un diff ni un rapport complet quand trois lignes suffisent.
 
 ## Qualité du code
 
