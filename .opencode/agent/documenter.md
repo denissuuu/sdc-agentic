@@ -2,7 +2,7 @@
 description: Documenter. Génère ou met à jour README, documentation et changelog, uniquement sur demande explicite.
 mode: subagent
 model: opencode/big-pickle
-temperature: 0.2
+temperature: 0.1
 steps: 25
 color: muted
 permission:

@@ -3,7 +3,7 @@ description: Développeur principal. Implémente, refactore et corrige le code e
 mode: all
 model: opencode/big-pickle
 temperature: 0.2
-steps: 40
+steps: 30
 color: success
 permission:
   task:
