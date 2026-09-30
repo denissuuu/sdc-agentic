@@ -51,19 +51,6 @@
         }
       }
     },
-    "tester": {
-      "mode": "subagent",
-      "model": "opencode/big-pickle",
-      "temperature": 0.1,
-      "steps": 25,
-      "color": "warning",
-      "description": "Testeur : exécute les tests, valide le travail du dev et remonte les corrections nécessaires.",
-      "permission": {
-        "task": {
-          "*": "deny"
-        }
-      }
-    },
     "reviewer": {
       "mode": "subagent",
       "model": "opencode/big-pickle",
@@ -71,6 +58,19 @@
       "steps": 25,
       "color": "info",
       "description": "Reviewer : relit le travail du dev, vérifie qualité, conventions, sécurité et cas limites, remonte un rapport PASS/FAIL.",
+      "permission": {
+        "task": {
+          "*": "deny"
+        }
+      }
+    },
+    "tester": {
+      "mode": "subagent",
+      "model": "opencode/big-pickle",
+      "temperature": 0.1,
+      "steps": 25,
+      "color": "warning",
+      "description": "Testeur : exécute les tests, valide le travail du dev et remonte les corrections nécessaires.",
       "permission": {
         "task": {
           "*": "deny"
