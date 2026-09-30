@@ -59,6 +59,23 @@ Aucun agent ne déclare une tâche terminée sans avoir exécuté la vérificati
 - Ne jamais commiter, sauvegarder ou dévoiler des secrets/clés.
 - Nettoyer son propre désordre : ne pas laisser de fichiers temporaires inutiles.
 
-## Commande d'instruction
+## Conventions de commits et de branches
+
+Commits :
+
+- Format Conventional Commits, en français : `type(scope) : sujet`.
+- Types : `feat`, `fix`, `docs`, `refactor`, `test`, `chore`, `build`, `perf`.
+- Scopes usuels : `repo`, `config`, `agents`, `agent-<rôle>`, `skills-<nom>`, `docs`.
+- Sujet à l'impératif, une seule ligne, sans point final ; corps du message uniquement si l'intention n'est pas évidente.
+- Un changement logique par commit : jamais de commit vide, jamais de commit uniquement cosmétique.
+- Jamais de `push --force` ni de réécriture d'un historique déjà poussé : les nouveaux commits s'ajoutent devant.
+
+Branches :
+
+- `main` est la branche de référence : toujours propre et toujours poussée.
+- Branches de travail : `type/description-courte-sujet` (exemple : `docs/clarifier-flux-orchestrateur`).
+- Une branche de travail est fusionnée vers `main` une fois le travail validé, puis supprimée.
+
+## Commandes d'instruction
 
 Voir le fichier `agents.md` (racine). Toute incompréhension de la demande doit être remontée à l'orchestrateur.
