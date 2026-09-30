@@ -37,7 +37,7 @@ Ce dépôt contient une équipe d'agents opencode prêts à l'emploi, pensés po
 
 - L'agent par défaut est `orchestrator` (`default_agent`). Une demande passe donc par lui, qui délègue ensuite avec l'outil `task`.
 - Pour cibler un rôle, nomme-le dans la demande : il sera alors traité en direct plutôt que délégué.
-- `dev` est un agent principal (`mode: all`), `orchestrator` est l'agent principal de l'équipe (`mode: primary`), les trois autres sont des sous-agents (`mode: subagent`) : ils ne s'appellent pas entre eux, seule l'équipe ne délègue qu'aux quatre rôles autorisés.
+- `dev` est un agent principal (`mode: all`), `orchestrator` est l'agent principal de l'équipe (`mode: primary`), les trois autres sont des sous-agents (`mode: subagent`) : ils ne s'appellent pas entre eux ; seul `orchestrator` délègue, et seulement vers `dev`, `reviewer`, `tester` et `documenter`.
 
 ## Workflow
 
