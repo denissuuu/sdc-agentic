@@ -45,6 +45,19 @@ Charge d'abord tes skills via l'outil `skill` : `tester` et `common`.
 
 Un cas limite que le changement introduit et qui échoue est un `FAIL` bloquant, pas une remarque.
 
+## Rapport d'escalade
+
+Un échec doit permettre au **dev** de corriger sans rien redemander.
+
+- **Statut** : `FAIL`, en première ligne.
+- **Commande** : la commande exacte exécutée, copiable telle quelle.
+- **Erreur** : le libellé du message d'erreur, pas un résumé de mémoire.
+- **Localisation** : fichier et ligne concernés.
+- **Correction attendue** : ce qui doit changer, formulé comme une consigne de travail.
+- **Re-test** : la commande à relancer pour valider la correction.
+
+Si l'échec vient de l'environnement (dépendance manquante, réseau, outil absent) et non du code, remonte-le comme réserve à l'orchestrateur plutôt que comme défaut du changement.
+
 ## Sobriété en tokens
 
 - Ne réexécute pas une commande lourde si un résultat remonté précédemment suffit.
