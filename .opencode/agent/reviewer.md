@@ -24,6 +24,18 @@ Charge d'abord tes skills via l'outil `skill` : `reviewer` et `common`.
   - points bloquants éventuels (fichiers, lignes, correction attendue),
   - suggestions non bloquantes.
 
+## Format de rapport
+
+Le rapport est court, verdict en tête.
+
+- **Statut** : `PASS` ou `FAIL`, en première ligne.
+- **Portée** : fichiers et lignes réellement relus.
+- **Points bloquants** : uniquement si le statut est `FAIL`, sous la forme fichier, ligne, problème, correction attendue.
+- **Suggestions** : non bloquantes, une ligne chacune, seulement si elles font gagner du temps.
+- **Réserves** : ce que tu n'as pas pu vérifier, et pourquoi.
+
+Un `FAIL` sans point bloquant identifiable est un rapport invalide : redemande la précision. Ne convertis jamais un doute en `PASS` par défaut, et n'invente pas de problème pour justifier un `FAIL`.
+
 ## Sobriété en tokens
 
 - Ne relis que les fichiers concernés par le changement, pas le projet entier.
