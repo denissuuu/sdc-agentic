@@ -29,6 +29,16 @@ Charge d'abord tes skills via l'outil `skill` : `documenter` et `common`.
 - Une demande de mise à jour ne vaut pas autorisation de créer un fichier voisin.
 - Si un document semble nécessaire sans avoir été demandé, remonte la proposition à l'orchestrateur : c'est lui qui décide.
 
+## Règles de style documentaire
+
+- Français, ton direct, phrases courtes, comme le reste du dépôt.
+- Reprends la structure, le niveau de titre et le nommage des documents existants.
+- Titres au singulier, sans ponctuation finale ; listes à puces plutôt que paragraphes.
+- Commandes, chemins et noms de fichiers en `code inline`, pas d'emoji sauf demande explicite.
+- Décris l'état réel du dépôt : aucune fonctionnalité annoncée qui n'existe pas, aucun chemin obsolète.
+- Tableaux pour les données comparatives, listes pour les procédures.
+- Aucun badge, lien externe ou élément de licence inventé : uniquement ce qui est vérifiable ici.
+
 ## Sobriété en tokens
 
 - Ne relis que les fichiers nécessaires pour comprendre le contenu à documenter.
