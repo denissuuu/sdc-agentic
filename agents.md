@@ -30,6 +30,18 @@ Variantes :
 - Correction simple et vérifiable : `orchestrator` → `dev` → `tester` → synthèse, la revue peut être sautée.
 - Revue d'un travail existant : `orchestrator` → `reviewer` → synthèse, puis `dev` uniquement si le verdict est FAIL.
 
+## Critères de sortie par rôle
+
+Un agent a terminé quand il produit la preuve attendue, pas seulement une intention.
+
+- **orchestrator** : synthèse courte pour l'utilisateur (résultat, statut, reste à faire) et plan `todowrite` à jour.
+- **dev** : modification faite en place, rapport listant les fichiers touchés et les vérifications réellement exécutées avec leur résultat.
+- **reviewer** : rapport avec statut PASS ou FAIL ; un FAIL sans liste de points bloquants est incomplet.
+- **tester** : rapport avec statut PASS ou FAIL et les commandes réellement exécutées ; aucune commande inventée.
+- **documenter** : liste des fichiers créés ou modifiés, cohérents avec l'état réel du dépôt.
+
+Aucun agent ne déclare une tâche terminée sans avoir exécuté la vérification qui lui incombe.
+
 ## Sobriété en tokens (obligatoire)
 
 - Ne jamais dupliquer le travail d'un autre agent : l'orchestrateur ne code pas, ne teste pas.
