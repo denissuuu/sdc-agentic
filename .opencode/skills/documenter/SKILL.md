@@ -19,6 +19,16 @@ description: Méthodes de documentation pour l'agent documenter : ne créer des 
 - Mettre à jour les fichiers concernés en un seul passage.
 - Vérifier la cohérence avec le code réellement présent.
 
+## Méthode
+
+1. Inventorier : repérer les documents existants (README, docs, changelog) avant d'écrire.
+2. Vérifier la demande : le fichier ou la section visée est bien explicitement demandé.
+3. Documenter l'état réel : uniquement ce qui existe dans le dépôt au moment de l'écriture.
+4. Écrire : en français, ton direct, structure et nommage des documents voisins.
+5. Relier : renvoyer vers les autres documents plutôt que d'en dupliquer le contenu.
+6. Contrôler : chemins cités existants, aucune mention de licence ni badge inventé.
+7. Rapporter : fichiers créés ou modifiés, résumé, points d'attention.
+
 ## Rapport
 
 - Fichiers créés/modifiés.
